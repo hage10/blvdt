@@ -1,0 +1,28 @@
+<div class="flex flex-column w-full h-full justify-content-between">
+  <div class="header flex flex-row justify-content-between  px-6">
+    <div class="flex flex-row gap-2 py-1">
+      <img src="assets/demo/images/egov/imgQuocHuy.png" alt="imgQuocHuy" class="h-6rem w-6rem">
+      <div class="flex flex-column justify-content-center">
+        <h1 class="text-xl text-green-700 font-bold">HỆ THỐNG THÔNG TIN CHỈ ĐẠO ĐIỀU HÀNH CỦA</h1>
+        <span class="text-4xl text-red-500 font-bold">BỘ TÀI NGUYÊN VÀ MÔI TRƯỜNG</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+  <div class="flex justify-content-center align-items-center gap-4 px-8">
+    <img src="assets/demo/images/egov/imgMaps.png" alt="imgQuocHuy" style="object-fit: contain;" height="500px" width="379px">
+    <div class="flex flex-wrap w-full row-gap-6">
+      <ng-container *ngFor="let item of items">
+        <div class="flex flex-column gap-2 w-6 lg:w-4 xl:w-3 align-items-center">
+          <div (click)="router.navigate(['/egov', item.routerLink])" class="scale-up flex align-items-center justify-content-center h-6rem w-6rem border-3 bg-green-700 border-white border-circle cursor-pointer" style="box-shadow: 0px 2px 4px 0px #0000001A;">
+            <img src={{item.icon}} alt={{item.icon}} height="48px" width="48px">
+          </div>
+          <p class="text-center text-base font-bold">{{item.name}}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="footer py-2 bg-green-700 px-6">
+    <p class="text-white font-italic ml-5">Bản quyền thuộc về Bộ Tài Nguyên và Môi Trường</p>
+  </div>
+</div>

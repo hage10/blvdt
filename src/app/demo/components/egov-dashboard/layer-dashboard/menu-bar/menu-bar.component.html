@@ -1,0 +1,8 @@
+<div class="bg-green-700 py-2 flex justify-content-center align-items-center w-full">
+  <ng-container *ngFor="let item of items; let last = last">
+    <div [ngClass]="{'border-right-1 border-white': !last}" style="padding-left: 20px; padding-right: 20px;">
+      <img [src]="item.icon" [alt]="item.icon" height="30px" width="30px">
+    </div>
+  </ng-container>
+  
+</div>
